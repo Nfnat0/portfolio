@@ -2,11 +2,9 @@
   <v-container>
     <v-row justify="center">
       <v-col cols="12" md="8">
-        <v-card class="elevation-2 mt-5">
+        <v-card class="elevation-2 mt-5 rounded-card">
           <v-card-title>
-            <div>
-              <h3 class="headline mb-0">Contact Me</h3>
-            </div>
+            <h3 class="headline mb-0">Contact Me</h3>
           </v-card-title>
           <v-card-text>
             <v-form ref="form" v-model="valid">
@@ -31,6 +29,8 @@
               <v-btn
                 :disabled="!valid"
                 color="primary"
+                class="mt-4"
+                rounded
                 @click="submit"
               >
                 Send
@@ -78,7 +78,7 @@ export default {
 </script>
 
 <style scoped>
-.v-card {
-  margin: 20px 0;
+.rounded-card {
+  border-radius: 15px;
 }
 </style>

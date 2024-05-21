@@ -9,7 +9,9 @@
       <v-btn text to="/contact">Contact</v-btn>
     </v-app-bar>
     <v-main>
-      <nuxt />
+      <v-container>
+        <nuxt />
+      </v-container>
     </v-main>
     <v-footer app>
       <v-col class="text-center">
@@ -24,3 +26,13 @@ export default {
   name: 'DefaultLayout'
 }
 </script>
+
+<style scoped>
+.v-btn {
+  margin: 0 10px;
+}
+
+.v-app-bar, .v-footer {
+  border-radius: 15px;
+}
+</style>
