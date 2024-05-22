@@ -33,7 +33,11 @@ export default {
 .v-btn {
   margin: 0 10px;
 }
-
+.v-main {
+  background: url("/images/A beautiful cityscape.webp") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh; /* Ensure the background covers the entire viewport height */
+}
 .v-app-bar, .v-footer {
   border-radius: 15px;
 }
