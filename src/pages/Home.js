@@ -1,6 +1,8 @@
 import React from 'react';
 import { Typography, Box, Grid, Button } from '@mui/material';
+import config from '../config'; // Import the configuration file
 
+// Home page component to display the home page content
 const Home = () => {
   return (
     <Box sx={{ padding: 4, backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: 2 }}>
@@ -9,20 +11,22 @@ const Home = () => {
         Explore my projects and learn more about me.
       </Typography>
       <Grid container spacing={2}>
-        <Grid item xs={12} md={6}>
-          <Box sx={{ backgroundColor: 'primary.main', color: 'white', padding: 2, borderRadius: 2 }}>
-            <Typography variant="h5">Project 1</Typography>
-            <Typography variant="body2">Description of project 1.</Typography>
-            <Button variant="contained" color="secondary" sx={{ marginTop: 2 }}>Learn More</Button>
-          </Box>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <Box sx={{ backgroundColor: 'primary.main', color: 'white', padding: 2, borderRadius: 2 }}>
-            <Typography variant="h5">Project 2</Typography>
-            <Typography variant="body2">Description of project 2.</Typography>
-            <Button variant="contained" color="secondary" sx={{ marginTop: 2 }}>Learn More</Button>
-          </Box>
-        </Grid>
+        {config.projects.map((project, index) => (
+          <Grid item xs={12} md={6} key={index}>
+            <Box sx={{ backgroundColor: 'primary.main', color: 'white', padding: 2, borderRadius: 2 }}>
+              <Typography variant="h5">{project.name}</Typography>
+              <Typography variant="body2">{project.description}</Typography>
+              <Button
+                variant="contained"
+                sx={{ backgroundColor: 'secondary.main', color: 'white', marginTop: 2 }}
+                href={project.url}
+                target="_blank"
+              >
+                Learn More
+              </Button>
+            </Box>
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );
