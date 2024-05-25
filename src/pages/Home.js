@@ -6,7 +6,7 @@ import config from '../config'; // Import the configuration file
 const Home = () => {
   return (
     <Box sx={{ padding: 4, backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: 2 }}>
-      <Typography variant="h2" gutterBottom>Welcome to My Portfolio</Typography>
+      <Typography variant="h3" gutterBottom>Welcome to My Portfolio</Typography>
       <Typography variant="body1" paragraph>
         Explore my projects and learn more about me.
       </Typography>

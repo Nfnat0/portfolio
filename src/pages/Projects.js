@@ -8,7 +8,7 @@ import StyledButton from '../components/StyledButton';
 const Projects = () => {
   return (
     <Box sx={{ padding: 4, backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: 2 }}>
-      <Typography variant="h2" gutterBottom>My Projects</Typography>
+      <Typography variant="h3" gutterBottom>My Projects</Typography>
       <Grid container spacing={2}>
         {config.projects.map((project) => (
           <Grid item xs={12} md={4} key={project.id}>

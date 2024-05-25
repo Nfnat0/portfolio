@@ -13,7 +13,7 @@ const ProjectDetail = () => {
 
   return (
     <Box sx={{ padding: 4, backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: 2 }}>
-      <Typography variant="h2" gutterBottom>{project.name}</Typography>
+      <Typography variant="h3" gutterBottom>{project.name}</Typography>
       <Grid container spacing={2}>
         {project.detailImages.map((image, index) => (
           <Grid item xs={12} md={6} key={index}>

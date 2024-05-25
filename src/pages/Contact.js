@@ -4,7 +4,7 @@ import { Typography, Box, TextField, Button } from '@mui/material';
 const Contact = () => {
   return (
     <Box sx={{ padding: 4, backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: 2 }}>
-      <Typography variant="h2" gutterBottom>Contact Me</Typography>
+      <Typography variant="h3" gutterBottom>Contact Me</Typography>
       <Box
         component="form"
         sx={{

@@ -3,7 +3,7 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   typography: {
     fontFamily: 'Roboto, Arial, sans-serif',
-    h2: {
+    h3: {
       fontWeight: 700, // Bold project titles
     },
     h5: {
