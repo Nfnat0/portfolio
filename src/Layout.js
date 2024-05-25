@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, Typography, Button, Container, Box, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { AppBar, Toolbar, Typography, Container, Box, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import Footer from './Footer';
+import HeaderButton from './components/HeaderButton'; // Import the HeaderButton component
 
 // Layout component to provide a consistent layout across all pages
 const Layout = ({ children }) => {
@@ -47,7 +48,7 @@ const Layout = ({ children }) => {
       }}
     >
       {/* Header */}
-      <AppBar position="static" color="primary">
+      <AppBar position="static">
         <Toolbar>
           <IconButton
             color="inherit"
@@ -70,10 +71,10 @@ const Layout = ({ children }) => {
             <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>My Portfolio</Link>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            <Button color="inherit" component={Link} to="/">Home</Button>
-            <Button color="inherit" component={Link} to="/about">About</Button>
-            <Button color="inherit" component={Link} to="/projects">Projects</Button>
-            <Button color="inherit" component={Link} to="/contact">Contact</Button>
+            <HeaderButton component={Link} to="/">Home</HeaderButton>
+            <HeaderButton component={Link} to="/about">About</HeaderButton>
+            <HeaderButton component={Link} to="/projects">Projects</HeaderButton>
+            <HeaderButton component={Link} to="/contact">Contact</HeaderButton>
           </Box>
         </Toolbar>
       </AppBar>
