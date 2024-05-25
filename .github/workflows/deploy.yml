@@ -14,21 +14,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-
     - name: Install dependencies
       run: npm install
 
     - name: Build project
-      run: npm run generate
-
-    - name: Install AWS CLI
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y awscli
+      run: CI=false npm run build
 
     - name: Configure AWS credentials
       env:
@@ -41,4 +31,4 @@ jobs:
 
     - name: Deploy to S3
       run: |
-        aws s3 sync dist/ s3://mna-portfolio-bucket --delete
+        aws s3 sync build/ s3://${{ secrets.AWS_S3_BUCKET }} --delete
