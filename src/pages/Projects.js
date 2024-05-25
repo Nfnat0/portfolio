@@ -1,7 +1,6 @@
 import React from 'react';
 import { Typography, Box, Grid, Button } from '@mui/material';
 
-// Projects page component to display the list of projects
 const Projects = () => {
   return (
     <Box sx={{ padding: 4, backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: 2 }}>

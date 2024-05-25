@@ -1,7 +1,6 @@
 import React from 'react';
 import { Typography, Box, Grid, Button } from '@mui/material';
 
-// Home page component to display the home page content
 const Home = () => {
   return (
     <Box sx={{ padding: 4, backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: 2 }}>
