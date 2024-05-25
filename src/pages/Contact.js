@@ -1,12 +1,22 @@
 import React from 'react';
-import { Typography, Box } from '@mui/material';
+import { Typography, Box, TextField, Button } from '@mui/material';
 
-// Contact page component to display contact form
 const Contact = () => {
   return (
-    <Box>
-      <Typography variant="h2">Contact Me</Typography>
-      <Typography variant="body1">Here you can provide a form to contact you.</Typography>
+    <Box sx={{ padding: 4, backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: 2 }}>
+      <Typography variant="h2" gutterBottom>Contact Me</Typography>
+      <Box
+        component="form"
+        sx={{
+          '& .MuiTextField-root': { marginBottom: 2 },
+          '& .MuiButton-root': { marginTop: 2 },
+        }}
+      >
+        <TextField label="Name" variant="outlined" fullWidth />
+        <TextField label="Email" variant="outlined" fullWidth />
+        <TextField label="Message" variant="outlined" fullWidth multiline rows={4} />
+        <Button variant="contained" color="primary">Send</Button>
+      </Box>
     </Box>
   );
 };
