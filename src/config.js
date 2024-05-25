@@ -4,7 +4,7 @@ const config = {
       id: 1,
       name: "Task Management App",
       description: "A web application to manage tasks efficiently.",
-      url: "https://example.com/task-management-app",
+      url: "https://d5d5r254770e9.cloudfront.net",
       imageUrl: "/images/task-management/top.jpg",
       detailImages: ["/images/task-management/detail1.jpg", "/images/task-management/detail2.jpg"],
       technologies: ["React", "Node.js", "MongoDB"],

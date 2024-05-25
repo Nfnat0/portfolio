@@ -9,6 +9,7 @@ const StyledButton = ({ children, ...props }) => {
         borderRadius: '8px',
         backgroundColor: "#9C27B0",
         margin: "0 5px",
+        marginTop: 2,
         padding: '6px 16px',
         minWidth: '100px', // Standardized size
         "&:hover": {

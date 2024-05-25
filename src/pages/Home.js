@@ -1,6 +1,8 @@
 import React from 'react';
-import { Typography, Box, Grid, Button } from '@mui/material';
+import { Typography, Box, Grid } from '@mui/material';
+import { Link } from 'react-router-dom';
 import config from '../config'; // Import the configuration file
+import StyledButton from '../components/StyledButton';
 
 // Home page component to display the home page content
 const Home = () => {
@@ -16,14 +18,13 @@ const Home = () => {
             <Box sx={{ backgroundColor: 'primary.main', color: 'white', padding: 2, borderRadius: 2 }}>
               <Typography variant="h5">{project.name}</Typography>
               <Typography variant="body2">{project.description}</Typography>
-              <Button
+              <StyledButton
                 variant="contained"
-                sx={{ backgroundColor: 'secondary.main', color: 'white', marginTop: 2 }}
-                href={project.url}
-                target="_blank"
+                component={Link}
+                to={`/projects/${project.id}`}
               >
                 Learn More
-              </Button>
+              </StyledButton>
             </Box>
           </Grid>
         ))}
