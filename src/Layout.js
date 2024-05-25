@@ -19,16 +19,16 @@ const Layout = ({ children }) => {
         My Portfolio
       </Typography>
       <List>
-        <ListItem button component={Link} to="/">
+        <ListItem component={Link} to="/">
           <ListItemText primary="Home" />
         </ListItem>
-        <ListItem button component={Link} to="/about">
+        <ListItem component={Link} to="/about">
           <ListItemText primary="About" />
         </ListItem>
-        <ListItem button component={Link} to="/projects">
+        <ListItem component={Link} to="/projects">
           <ListItemText primary="Projects" />
         </ListItem>
-        <ListItem button component={Link} to="/contact">
+        <ListItem component={Link} to="/contact">
           <ListItemText primary="Contact" />
         </ListItem>
       </List>
