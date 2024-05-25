@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography, Box, TextField, Button } from '@mui/material';
 
+// Contact page component to display contact form
 const Contact = () => {
   return (
     <Box sx={{ padding: 4, backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: 2 }}>

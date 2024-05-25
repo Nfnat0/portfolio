@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 
+// Footer component to display the footer content
 const Footer = () => {
   return (
     <Box
