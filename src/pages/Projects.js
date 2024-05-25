@@ -10,9 +10,12 @@ const Projects = () => {
     <Box sx={{ padding: 4, backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: 2 }}>
       <Typography variant="h2" gutterBottom>My Projects</Typography>
       <Grid container spacing={2}>
-        {config.projects.map((project, index) => (
-          <Grid item xs={12} md={4} key={index}>
+        {config.projects.map((project) => (
+          <Grid item xs={12} md={4} key={project.id}>
             <Card sx={{ height: '100%' }}>
+              <CardContent>
+                <Typography variant="h5">{project.name}</Typography>
+              </CardContent>
               <CardMedia
                 component="img"
                 height="140"
@@ -20,7 +23,6 @@ const Projects = () => {
                 alt={project.name}
               />
               <CardContent>
-                <Typography variant="h5">{project.name}</Typography>
                 <Typography variant="body2">{project.description}</Typography>
               </CardContent>
               <CardActions>
