@@ -12,20 +12,20 @@ const Projects = () => {
       <Grid container spacing={2}>
         {config.projects.map((project) => (
           <Grid item xs={12} md={4} key={project.id}>
-            <Card sx={{ height: '100%' }}>
+            <Card sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
               <CardContent>
                 <Typography variant="h5">{project.name}</Typography>
               </CardContent>
               <CardMedia
                 component="img"
-                height="140"
+                sx={{ height: 300, objectFit: 'cover' }}
                 image={project.imageUrl}
                 alt={project.name}
               />
               <CardContent>
                 <Typography variant="body2">{project.description}</Typography>
               </CardContent>
-              <CardActions>
+              <CardActions sx={{ justifyContent: 'center', mt: 'auto' }}>
                 <StyledButton
                   component={Link}
                   to={`/projects/${project.id}`}
