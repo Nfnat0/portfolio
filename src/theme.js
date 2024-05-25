@@ -2,7 +2,13 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   typography: {
-    fontFamily: 'Poppins, Arial, sans-serif',
+    fontFamily: 'Roboto, Arial, sans-serif',
+    h2: {
+      fontWeight: 700, // Bold project titles
+    },
+    h5: {
+      fontWeight: 700, // Bold header items
+    },
   },
   palette: {
     primary: {
