@@ -48,7 +48,7 @@ const Layout = ({ children }) => {
       }}
     >
       {/* Header */}
-      <AppBar position="static">
+      <AppBar position="static" sx={{ backgroundColor: 'rgba(25,  118, 210, 0.7)' }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -60,7 +60,7 @@ const Layout = ({ children }) => {
             <MenuIcon />
           </IconButton>
           <Typography
-            variant="h6"
+            variant="h4"
             sx={{
               flexGrow: 1,
               whiteSpace: 'nowrap',

@@ -6,6 +6,9 @@ const theme = createTheme({
     h3: {
       fontWeight: 700, // Bold project titles
     },
+    h4: {
+      fontWeight: 700, // Bold project titles
+    },
     h5: {
       fontWeight: 700, // Bold header items
     },
