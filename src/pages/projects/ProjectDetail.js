@@ -22,7 +22,7 @@ const ProjectDetail = () => {
       <Grid container spacing={2}>
         {project.detailImages.map((image, index) => (
           <Grid item xs={12} md={6} key={index}>
-            <Box sx={{ height: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <Box sx={{ height: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0, 0, 0, 0.1)', padding: 1, borderRadius: 2 }}>
               <img src={image} alt="" style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
             </Box>
           </Grid>
