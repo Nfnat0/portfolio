@@ -5,8 +5,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import ProjectDetail from './pages/projects/ProjectDetail'; // Use the shared ProjectDetail component
 
-// App component to set up routing for the application
 const App = () => {
   return (
     <Router>
@@ -16,6 +16,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} /> {/* Dynamic route for project details */}
         </Routes>
       </Layout>
     </Router>

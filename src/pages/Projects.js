@@ -1,7 +1,10 @@
 import React from 'react';
-import { Typography, Box, Grid, Button } from '@mui/material';
+import { Typography, Box, Grid, Card, CardMedia, CardContent, CardActions } from '@mui/material';
+import { Link } from 'react-router-dom';
 import config from '../config';
+import StyledButton from '../components/StyledButton';
 
+// Projects page component to display the list of projects
 const Projects = () => {
   return (
     <Box sx={{ padding: 4, backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: 2 }}>
@@ -9,18 +12,27 @@ const Projects = () => {
       <Grid container spacing={2}>
         {config.projects.map((project, index) => (
           <Grid item xs={12} md={4} key={index}>
-            <Box sx={{ backgroundColor: 'primary.main', color: 'white', padding: 2, borderRadius: 2 }}>
-              <Typography variant="h5">{project.name}</Typography>
-              <Typography variant="body2">{project.description}</Typography>
-              <Button
-                variant="contained"
-                sx={{ backgroundColor: 'secondary.main', color: 'white', marginTop: 2 }}
-                href={project.url}
-                target="_blank"
-              >
-                Learn More
-              </Button>
-            </Box>
+            <Card sx={{ height: '100%' }}>
+              <CardMedia
+                component="img"
+                height="140"
+                image={project.imageUrl}
+                alt={project.name}
+              />
+              <CardContent>
+                <Typography variant="h5">{project.name}</Typography>
+                <Typography variant="body2">{project.description}</Typography>
+              </CardContent>
+              <CardActions>
+                <StyledButton
+                  component={Link}
+                  to={`/projects/${project.id}`}
+                  fullWidth
+                >
+                  Learn More
+                </StyledButton>
+              </CardActions>
+            </Card>
           </Grid>
         ))}
       </Grid>
